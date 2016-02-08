@@ -1,0 +1,59 @@
+Patterns for collaborative Applications on Bluemix
+https://github.com/ibm-bluemix/collaboration
+© Copyright IBM Corp. 2016
+
+
+cfenv-wrapper.js
+https://github.com/aerwin/node-cfenv-wrapper
+ALv2: https://github.com/aerwin/node-cfenv-wrapper/blob/master/LICENSE
+
+
+The following Node modules are used but not included in the project:
+
+express
+https://www.npmjs.com/package/express
+MIT: http://opensource.org/licenses/MIT
+
+cfenv
+https://www.npmjs.com/package/cfenv
+ALv2: http://opensource.org/licenses/Apache-2.0
+
+passport
+https://www.npmjs.com/package/passport
+MIT: http://opensource.org/licenses/MIT
+
+cookie-parser
+https://www.npmjs.com/package/cookie-parser
+MIT: http://opensource.org/licenses/MIT
+
+express-session
+https://www.npmjs.com/package/express-session
+MIT: http://opensource.org/licenses/MIT
+
+passport-idaas-openidconnect
+https://www.npmjs.com/package/passport-idaas-openidconnect
+MIT: http://opensource.org/licenses/MIT
+
+connect-mongodb-session
+https://www.npmjs.com/package/connect-mongodb-session
+ALv2: https://github.com/mongodb-js/connect-mongodb-session/blob/master/LICENSE
+
+mongodb
+https://www.npmjs.com/package/mongodb
+ALv2: http://opensource.org/licenses/Apache-2.0
+
+acl
+https://www.npmjs.com/package/acl
+MIT: https://www.npmjs.com/package/acl#license
+
+body-parser
+https://www.npmjs.com/package/body-parser
+MIT: http://opensource.org/licenses/MIT
+
+properties-parser
+https://www.npmjs.com/package/properties-parser
+MIT: http://opensource.org/licenses/MIT
+
+fs-sync
+https://www.npmjs.com/package/fs-sync
+MIT: http://opensource.org/licenses/MIT

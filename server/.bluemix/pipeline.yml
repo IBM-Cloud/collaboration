@@ -1,0 +1,34 @@
+---
+stages:
+- name: Build
+  inputs:
+  - type: git
+    branch: master
+  triggers:
+  - type: commit
+  jobs:
+  - name: collab-build
+    type: builder
+    artifact_dir: ./
+    build_type: grunt
+    script: |-
+      #!/bin/bash
+      npm install
+- name: Deploy
+  inputs:
+  - type: job
+    stage: Build
+    job: collab-build
+  jobs:
+  - name: Deploy
+    type: deployer
+    target:
+      url: ${CF_TARGET_URL}
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
+      application: ${CF_APP}
+    script: |-
+      #!/bin/bash
+      cf push
+      # view logs
+      #cf logs "${CF_APP}" --recent
