@@ -24,12 +24,12 @@ Make sure the following tools are installed and on your path.
 Invoke the following commands to create the the MongoDB service and the SSO service. Alternatively you can use the user interface as described in the article [Scale single sign-on for your Node.js cloud apps](https://www.ibm.com/developerworks/library/wa-scale-sso-for-node-apps-trs-bluemix/).
 
 ```sh
-$ cf login -a api.ng.bluemix.net.
+$ cf login -a api.ng.bluemix.net
 $ cf create-service mongodb 100 collab-mongodb
 $ cf create-service SingleSignOn standard collab-sso
 ```
 
-Before you can create the application and bind the SSO you need to configure the service in the dashboard UI. Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for details.
+Before you can create the application and bind the SSO service you need to configure the service in the dashboard UI. Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for details.
 
 * Create cloud directory
 * Create users
@@ -42,7 +42,7 @@ $ npm install
 $ cf push
 ```
 
-Once you get a route, define the callback in the SSO dashboard, e.g. https://collaboration-farci-custard.mybluemix.net/auth/sso/callback.
+Once you have a route, define the callback in the SSO dashboard, e.g. https://collaboration-farci-custard.mybluemix.net/auth/sso/callback.
 
 To run the sample open these URLs:
 
