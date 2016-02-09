@@ -59,4 +59,4 @@ First copy all credentials of your Bluemix services into a new file 'env.json'. 
 
 Unfortunately I didn't manage to access the MongoDB service on Bluemix remotely. At this point you need to install [MongoDB](https://www.mongodb.org) locally and point to it by defining the local URL 'mongodb://localhost:27017/db' in env.json. I'd like to switch to MongoDB by Compose in the future which is another MongoDB service on Bluemix.
 
-The SSO service only allows to define one callback. However the callback needs to point to a local URL like 'http://localhost:6013/auth/sso/callback'. So you either need to create a second SSO service (in another space) or you need to change the callback URL in the SSO service back and forth when running on the server and locally.
+The SSO service only allows to define one callback per Bluemix application. However to run the application locally the callback needs to point to a local URL like 'http://localhost:6013/auth/sso/callback'. To work around this you can create a second Node.js application, bind the same SSO service to it and define a second callback. Make sure you copy the credentials of this second instance into env.json.
