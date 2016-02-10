@@ -25,18 +25,20 @@ var mongodbUtils = require('./mongodb.js')();
 
 module.exports = function() {
   return {
-  	"setUp" : function(app) {
+  	"setUp" : function(app, callback) {
       var store;
 
       var mongodbConfig = appEnv.getService(/mongodb.*/);
       if (!mongodbConfig) {
-        console.log('Error: No MongoDB config found', err);
-        return false;
+        var err = 'Error: No MongoDB config found';
+        console.log(err);
+        callback(err);
       }
       var mongodbUrl = mongodbConfig.credentials.url;
       if (!mongodbUrl) {
-        console.log('Error: No MongoDB URL found', err);
-        return false;
+        var err = 'Error: No MongoDB URL found';
+        console.log(err);
+        callback(err);
       }
 
       store = new MongoDBStore({ 
@@ -110,7 +112,7 @@ module.exports = function() {
 
       app.get('/admin/usersessions', this.ensureAuthenticated, function (req, res) {
         var errorText = 'Error: Sessions cannot be read from MongoDB';
-        mongodbUtils.getDatabase(function(db) {
+        mongodbUtils.getDatabase(function(err, db) {
           if (db) {
             db.collection('mySessions').find({}, {limit:10, sort:[['_id', 'desc']]}, function(err, cursor) {
             if (err) {
@@ -143,6 +145,7 @@ module.exports = function() {
           }
         });
       });
+      callback(null);
   	},
     "ensureAuthenticated" : function(req, res, next) {      
       var useBasicAuthorization = false;

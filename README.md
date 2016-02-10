@@ -42,12 +42,15 @@ $ npm install
 $ cf push
 ```
 
+After you've done the initial 'cf push' you should change manifest.yml and replace ${random-word} with your route. Otherwise new routes will be added the next time you invoke 'cf push'.
+
 Once you have a route, define the callback in the SSO dashboard, e.g. https://collaboration-farci-custard.mybluemix.net/auth/sso/callback.
 
 To run the sample open these URLs:
 
 * https://collaboration-farci-custard.mybluemix.net/
 * https://collaboration-farci-custard.mybluemix.net/admin/currentuser
+* https://collaboration-farci-custard.mybluemix.net/admin/usersessions
 
 
 Setup and run the Application locally

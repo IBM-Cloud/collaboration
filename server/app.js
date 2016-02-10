@@ -18,14 +18,21 @@ var express = require('express');
 var mongodbUtils = require('./mongodb.js')();
 var authenticationUtils = require('./authentication.js')();
 var authorizationUtils = require('./authorization.js')();
+var persons = require('./persons.js')();
 var cfenv = require('./cfenv-wrapper');
 var appEnv = cfenv.getAppEnv();
 
 var app = express();
 
-authenticationUtils.setUp(app);
-
-authorizationUtils.setUp(app, authenticationUtils);
+authenticationUtils.setUp(app, function(err) {
+  if (!err) {
+    authorizationUtils.setUp(app, function(err, acl) {
+      if (!err) {
+        persons.setUp(app, acl);
+      }
+    });
+  }
+});
 
 app.use(express.static(__dirname + '/public'));
 app.listen(appEnv.port, function() {

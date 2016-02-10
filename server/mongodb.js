@@ -24,29 +24,31 @@ module.exports = function() {
   	"getDatabase" : function(callback) {
 
       if (databaseInstance) {
-        callback(databaseInstance);
+        callback(null, databaseInstance);
       }
       else {
     		var mongodbConfig = appEnv.getService(/mongodb.*/);
     		if (!mongodbConfig) {
-    			console.log('Error: No MongoDB config found', err);
-        	callback(null);
+          var err = 'Error: No MongoDB config found';
+    			console.log(err);
+        	callback(err, null);
     		}
     		var mongodbUrl = mongodbConfig.credentials.url;
     		if (!mongodbUrl) {
-    			console.log('Error: No MongoDB URL found', err);
-        	callback(null);
+          var err = 'Error: No MongoDB URL found';
+    			console.log(err);
+        	callback(err, null);
     		}
 
     		MongoClient.connect(mongodbUrl, function(err, db) { 
       			if (err) {
         			console.log('Error: No connection to MongoDB', err);
-        			callback(null);
+        			callback(err, null);
       			}
       			else {
       				console.log("Connected to MongoDB: " + mongodbUrl);
               databaseInstance = db;
-      				callback(db);
+      				callback(null, db);
       			}
     		});
       }		
