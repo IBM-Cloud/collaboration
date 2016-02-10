@@ -1,13 +1,19 @@
 Patterns for collaborative Applications on Bluemix
 ================================================================================
 
-The [collaboration](https://github.com/ibm-bluemix/collaboration) project contains sample code that shows how to build collaborative applications on [IBM Bluemix](https://bluemix.net). It's basically an extension of the popular MEAN stack including MongoDB, Node.js, Express and Angular with some additional techniques showing how to do authentication, authorization, REST API calls and other typical collaborative functionality.
+The [collaboration](https://github.com/ibm-bluemix/collaboration) project contains sample code that shows how to build collaborative applications on [IBM Bluemix](https://bluemix.net), for example document based applications like discussions or approval workflows. 
 
-The project will (hopefully) evolve over time. The first step shows how to do authentication of users via the [Single Sign On](https://www.ng.bluemix.net/docs/#services/SingleSignOn/index.html) service. Developers can run this application on Bluemix or locally. 
+Technically the project is basically an extension of the popular MEAN stack including MongoDB, Node.js, Express and AngularJS with some additional techniques showing how to do authentication, authorization and other typical collaborative functionality.
 
-Here is a screenshot of the SSO service configuration. For more screenshots check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder.
+The project will (hopefully) evolve over time. So far it includes the following functionality:
 
-![alt text](https://raw.githubusercontent.com/ibm-bluemix/collaboration/master/screenshots/sso-setup-4.png "Single Sign On")
+* Setup of a MongoDB on Bluemix (or locally)
+* Setup of a Node.js application on Bluemix (or locally)
+* Setup of an organization directory with test users on Bluemix
+* Authentication from Node.js against the directory via cookies incl. multi instance applications
+* Authorization on application level via roles
+* Authorization on document level via roles
+* REST APIs (first draft only) to access a sample business object 'person'
 
 Author: Niklas Heidloff [@nheidloff](http://twitter.com/nheidloff)
 
@@ -63,3 +69,20 @@ First copy all credentials of your Bluemix services into a new file 'env.json'. 
 Unfortunately I didn't manage to access the MongoDB service on Bluemix remotely. At this point you need to install [MongoDB](https://www.mongodb.org) locally and point to it by defining the local URL 'mongodb://localhost:27017/db' in env.json. I'd like to switch to MongoDB by Compose in the future which is another MongoDB service on Bluemix.
 
 The SSO service only allows to define one callback per Bluemix application. However to run the application locally the callback needs to point to a local URL like 'http://localhost:6013/auth/sso/callback'. To work around this you can create a second Node.js application, bind the same SSO service to it and define a second callback. Make sure you copy the credentials of this second instance into env.json.
+
+
+Authorization Demo
+================================================================================
+
+To understand the authorization capabilities check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder. Here are the steps to see the authorization functionality in action:
+
+* Create two test users in the cloud directory, e.g. admin and user
+* Log on in Chrome as admin (/login)
+* In Chrome add the admin as person document in MongoDB and add the application role admin (/admin/addadmin)
+* Log on in FF as user (/login)
+* In FF add the user as person document in MongoDB and add the application role user (/admin/adduser)
+* In either browser read the person documents which can be read by all users with the roles admin or user (/api/persons)
+* In FF read the person document for the user 'user' and make sure you have rights to update it (/api/person?id=56bb5af9bd7a6b2bcbcb1560)
+* In FF read the person document for the user 'admin' and make sure you don't have rights to update it (/api/person?id=56bb5a4abd7a6b2bcbcb155f)
+* In Chrome you should see that the admin is able to update both documents
+* In FF RESTClient invoke a post request. Set the Content-Type to application/json. You can copy one of the documents as JSON from the previous step (/api/persons). Change for example the title and try to update the documents. Again, for one document it should work, for the other one it's forbidden

@@ -16,12 +16,14 @@
 
 var mongodbUtils = require('./mongodb.js')();
 var authenticationUtils = require('./authentication.js')();
+var mongodb = require('mongodb');
 
 module.exports = function() {
   return {
   	"setUp" : function(app, acl) {
       var self = this;
 
+      // sample for access control on application level
       app.get('/api/persons', authenticationUtils.ensureAuthenticated, function (req, res) {
 
         acl.isAllowed(req.user['id'], 'persons', 'view', function (err, response) {
@@ -65,39 +67,117 @@ module.exports = function() {
         });
       });
 
-      app.get('/api/person/add', authenticationUtils.ensureAuthenticated, function (req, res) {
+      // sample for access control on document level
+      app.post('/api/person/update', authenticationUtils.ensureAuthenticated, function (req, res) {
 
-        acl.isAllowed(req.user['id'], 'persons', 'add', function (err, response) {
-          if (response) {
-            self.addPerson(
-              'PersonDirectoryId' + new Date(),
-              'PersonDisplayName' + new Date(),
-              "http://heidloff.net/wp-content/uploads/2015/11/4Y7B9422-4.jpg",
-              "Developer Advocate",
-              function(err, result) {
-                if (err) {
-                  res.write('Error: Person not added');
-                  res.end(); 
-                }
-                else {              
-                  res.write('Success: Person added');
-                  res.end();  
-                }
+        var personUpdate = req.body;
+        var documentId = personUpdate['_id'];
+        if (!documentId) {
+          res.write('Error: No _id provided');
+          res.end(); 
+        }
+        mongodbUtils.getDatabase(function(err, db) {
+          if (db) {
+            db.collection('persons').findOne({ _id: mongodb.ObjectId(documentId) }, function(err, document) {
+              if (err) {
+                res.write('Error: Document cannot be found');
+                res.end(); 
               }
-            );              
+              else {
+                acl.isAllowed(req.user['id'], documentId, 'update', function (err, response) { 
+                  if (response) {
+                    var displayName = document.displayName;
+                    if (personUpdate.displayName) {
+                      displayName = personUpdate.displayName;
+                      document.displayName = personUpdate.displayName;
+                    }
+                    var pictureUrl = document.pictureUrl;
+                    if (personUpdate.pictureUrl) {
+                      pictureUrl = personUpdate.pictureUrl;
+                      document.pictureUrl = personUpdate.pictureUrl;
+                    }
+                    var title = document.title;
+                    if (personUpdate.title) {
+                      title = personUpdate.title;
+                      document.title = personUpdate.title;
+                    }
+
+                    db.collection('persons').updateOne({ _id: mongodb.ObjectId(documentId) }, 
+                        { displayName:displayName, pictureUrl:pictureUrl, title:title}, function(err, result) {
+                      if (err) {
+                        res.write('Error: Document cannot be updated');
+                        res.end(); 
+                      }
+                      else {
+                        var access = { canRead: true,
+                                       canUpdate: true,
+                                       canDelete: false};
+
+                        var output = { person: document, access: access};
+
+                        res.writeHead(200, {'Content-Type': 'application/json'});
+                        res.write(JSON.stringify(output));
+                        res.end();
+                      }
+                    });                    
+                  }
+                  else {
+                    console.log('Error: Not allowed');
+                    res.sendStatus(403);
+                  }
+                });
+              }
+            });
           }
           else {
-            console.log('Error: Not allowed');
-            res.sendStatus(403);
+            res.write('Error: Database cannot be opened');
+            res.end(); 
           }
         });
       });
 
-      app.get('/api/person/update', authenticationUtils.ensureAuthenticated, function (req, res) {
+      // sample how to return access rights meta data in addition to document
+      app.get('/api/person', authenticationUtils.ensureAuthenticated, function (req, res) {
 
-        acl.isAllowed(req.user['id'], 'persons', 'update', function (err, response) {
+        acl.isAllowed(req.user['id'], 'persons', 'view', function (err, response) {
           if (response) {
-                      
+            var documentId = req.query.id;
+            if (!documentId) {
+              res.write('Error: No id provided');
+              res.end();
+            }
+            mongodbUtils.getDatabase(function(err, db) {
+              if (db) {
+                db.collection('persons').findOne({ _id: mongodb.ObjectId(documentId) }, function(err, document) {
+                  if (err) {
+                    res.write('Error: Document cannot be found');
+                    res.end(); 
+                  }
+                  else {
+                    var canUpdate = false;
+                    acl.isAllowed(req.user['id'], documentId, 'update', function (err, response) { 
+                      if (response) {
+                        canUpdate = true;
+                      }
+
+                      var access = { canRead: true,
+                                   canUpdate: canUpdate,
+                                   canDelete: false};
+
+                      var output = { person: document, access: access};
+
+                      res.writeHead(200, {'Content-Type': 'application/json'});
+                      res.write(JSON.stringify(output));
+                      res.end();
+                    });
+                  }
+                });
+              }
+              else {
+                res.write('Error: Database cannot be opened');
+                res.end(); 
+              }
+            });
           }
           else {
             console.log('Error: Not allowed');
@@ -108,12 +188,14 @@ module.exports = function() {
 
   	},
 
-    "addPerson" : function(directoryId, displayName, pictureUrl, title, callback) {  
+    "addPerson" : function(directoryId, displayName, pictureUrl, title, id, callback) {  
       var person = {
+        _id: mongodb.ObjectId(id),
         directoryId: directoryId,
         displayName: displayName,
         pictureUrl: pictureUrl,
-        title: title};
+        title: title
+      };
 
       mongodbUtils.getDatabase(function(err, db) {
         if (db) {

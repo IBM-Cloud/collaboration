@@ -110,6 +110,7 @@ module.exports = function() {
         res.send('Logged in user: '+ req.user['id']);
       });
 
+      // this API is open for all authenticated users for testing purposes
       app.get('/admin/usersessions', this.ensureAuthenticated, function (req, res) {
         var errorText = 'Error: Sessions cannot be read from MongoDB';
         mongodbUtils.getDatabase(function(err, db) {

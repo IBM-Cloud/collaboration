@@ -17,6 +17,7 @@
 var cfenv = require('./cfenv-wrapper');
 var appEnv = cfenv.getAppEnv();
 var MongoClient = require('mongodb').MongoClient;
+var mongodb = require('mongodb');
 var databaseInstance;
 
 module.exports = function() {
@@ -52,6 +53,11 @@ module.exports = function() {
       			}
     		});
       }		
-  	}
-  };
+  	},
+ 
+    "getObjectId" : function() {
+      var newObjectId = mongodb.ObjectId();
+      return '' + newObjectId.valueOf();
+    }
+  }
 };

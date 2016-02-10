@@ -21,8 +21,10 @@ var authorizationUtils = require('./authorization.js')();
 var persons = require('./persons.js')();
 var cfenv = require('./cfenv-wrapper');
 var appEnv = cfenv.getAppEnv();
+var bodyParser = require('body-parser');
 
 var app = express();
+app.use(bodyParser.json());
 
 authenticationUtils.setUp(app, function(err) {
   if (!err) {
