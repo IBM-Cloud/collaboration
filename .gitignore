@@ -1,7 +1,0 @@
-server/launchConfigurations/
-server/env.json
-server/node_modules
-.DS_Store
-server/.DS_Store
-screenshots/.DS_Store
-login-customization/
