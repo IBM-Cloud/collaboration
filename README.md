@@ -20,7 +20,7 @@ The project will (hopefully) evolve over time. So far it includes the following 
 
 Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for more information.
 
-![alt text](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/tree/master/screenshots/api-overview.png "APIs")
+![alt text](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/api-overview.png "APIs")
 
 Author: Niklas Heidloff [@nheidloff](http://twitter.com/nheidloff)
 
