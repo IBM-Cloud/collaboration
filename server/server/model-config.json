@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "./node_modules/loopback-component-passport/lib/models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "accessToken": {
+    "dataSource": "cloudant",
+    "public": false
+  },
+  "userCredential": {
+    "dataSource": "cloudant",
+    "public": false
+  },
+  "userIdentity": {
+    "dataSource": "cloudant",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "cloudant",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "cloudant",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "cloudant",
+    "public": false
+  },
+  "ApprovalRequest": {
+    "dataSource": "cloudant",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Person": {
+    "dataSource": "cloudant",
+    "public": true
+  }
+}

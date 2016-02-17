@@ -1,0 +1,73 @@
+{
+  "name": "ApprovalRequest",
+  "plural": "ApprovalRequests",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "dueDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "requester": {
+      "type": "belongsTo",
+      "model": "Person",
+      "foreignKey": ""
+    },
+    "approver": {
+      "type": "belongsTo",
+      "model": "Person",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "Admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "Manager",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "Requester",
+      "permission": "ALLOW",
+      "property": "upsert"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "Employee",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

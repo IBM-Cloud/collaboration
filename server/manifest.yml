@@ -1,0 +1,16 @@
+---
+declared-services:
+  collab-cloudant:
+    label: cloudantNoSQLDB
+    plan: Shared
+applications:
+- disk_quota: 256M
+  #host: collaboration-farci-custard
+  host: collaboration-${random-word}
+  name: collaboration
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 256M
+  services:
+  - collab-cloudant

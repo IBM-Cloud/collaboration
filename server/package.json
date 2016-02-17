@@ -1,0 +1,45 @@
+{
+  "name": "bluemix-collaboration",
+  "version": "0.0.2",
+  "description": "Patterns for collaborative Applications on Bluemix",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node .",
+    "pretest": "jshint .",
+    "posttest": "nsp check"
+  },
+  "dependencies": {
+    "compression": "1.6.1",
+    "cors": "2.7.1",
+    "helmet": "0.14.0",
+    "loopback": "2.26.2",
+    "loopback-boot": "2.16.0",
+    "loopback-component-explorer": "2.3.0",
+    "loopback-datasource-juggler": "2.45.1",
+    "serve-favicon": "2.3.0",
+    "loopback-connector-cloudant": "1.0.4",
+    "cfenv": "1.0.3",
+    "cloudant": "1.4.0",
+    "fs-sync":"1.0.1",
+    "properties-parser": "0.2.3",
+    "loopback-component-passport": "1.6.0",
+    "passport": "0.2.2",
+    "passport-idaas-openidconnect": "1.0.0",
+    "body-parser": "1.15.0",
+    "express-flash": "0.0.2",
+    "express-session": "1.13.0",
+    "connect-ensure-login": "0.1.1",
+    "jade": "1.11.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6",
+    "nsp": "^2.1.0"
+  },
+  "repository": {
+    "type": "",
+    "url": "https://github.com/IBM-Bluemix/collaboration"
+  },
+  "engines": {
+    "node": "4.2.6"
+  }
+}

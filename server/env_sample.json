@@ -1,0 +1,45 @@
+{
+ "VCAP_SERVICES": {
+  "SingleSignOn": [
+   {
+    "credentials": {
+     "authorizationEndpointUrl": "https://collaboration-xxx.iam.ibmcloud.com/idaas/oidc/endpoint/default/authorize",
+     "clientId": "xxx",
+     "issuerIdentifier": "collaboration-xxx.iam.ibmcloud.com",
+     "secret": "xxx",
+     "serverSupportedScope": [
+      "openid"
+     ],
+     "tokenEndpointUrl": "https://collaboration-xxx.iam.ibmcloud.com/idaas/oidc/endpoint/default/token"
+    },
+    "label": "SingleSignOn",
+    "name": "collab-sso",
+    "plan": "standard",
+    "tags": [
+     "security",
+     "ibm_created",
+     "ibm_dedicated_public"
+    ]
+   }
+  ],
+  "cloudantNoSQLDB": [
+   {
+    "credentials": {
+     "host": "xxx-bluemix.cloudant.com",
+     "password": "xxx",
+     "port": 443,
+     "url": "https://xxx-bluemix:xxx@xxx-bluemix.cloudant.com",
+     "username": "xxx-bluemix"
+    },
+    "label": "cloudantNoSQLDB",
+    "name": "collab-cloudant",
+    "plan": "Shared",
+    "tags": [
+     "data_management",
+     "ibm_created",
+     "ibm_dedicated_public"
+    ]
+   }
+  ]
+ }
+}

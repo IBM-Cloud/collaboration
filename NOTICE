@@ -1,0 +1,95 @@
+Patterns for collaborative Applications on Bluemix
+https://github.com/ibm-bluemix/collaboration
+© Copyright IBM Corp. 2016
+
+
+cfenv-wrapper.js
+https://github.com/aerwin/node-cfenv-wrapper
+ALv2: https://github.com/aerwin/node-cfenv-wrapper/blob/master/LICENSE
+
+
+The following Node modules are used but not included in the project:
+
+compression
+https://www.npmjs.com/package/compression
+MIT: http://spdx.org/licenses/MIT
+
+cors
+https://www.npmjs.com/package/cors
+MIT: http://spdx.org/licenses/MIT
+
+helmet
+https://www.npmjs.com/package/helmet
+MIT: http://spdx.org/licenses/MIT
+
+loopback
+https://www.npmjs.com/package/loopback
+MIT: http://spdx.org/licenses/MIT
+
+loopback-boot
+https://www.npmjs.com/package/loopback-boot
+MIT: http://spdx.org/licenses/MIT
+
+loopback-component-explorer
+https://www.npmjs.com/package/loopback-component-explorer
+MIT: http://spdx.org/licenses/MIT
+
+loopback-datasource-juggler
+https://www.npmjs.com/package/loopback-datasource-juggler
+MIT: http://spdx.org/licenses/MIT
+
+serve-favicon
+https://www.npmjs.com/package/serve-favicon
+MIT: http://spdx.org/licenses/MIT
+
+cloudant
+https://www.npmjs.com/package/cloudant
+ALv2: http://spdx.org/licenses/Apache-2.0
+
+loopback-connector-cloudant
+https://www.npmjs.com/package/loopback-connector-cloudant
+Artistic 2.0: http://opensource.org/licenses/Artistic-2.0
+
+cfenv
+https://www.npmjs.com/package/cfenv
+ALv2: http://opensource.org/licenses/Apache-2.0
+
+fs-sync
+https://www.npmjs.com/package/fs-sync
+MIT: http://opensource.org/licenses/MIT
+
+properties-parser
+https://www.npmjs.com/package/properties-parser
+MIT: http://opensource.org/licenses/MIT
+
+loopback-component-passport
+https://www.npmjs.com/package/loopback-component-passport
+Artistic 2.0: http://spdx.org/licenses/Artistic-2.0
+
+passport
+https://www.npmjs.com/package/passport
+MIT: http://opensource.org/licenses/MIT
+
+passport-idaas-openidconnect
+https://www.npmjs.com/package/passport-idaas-openidconnect
+MIT: http://opensource.org/licenses/MIT
+
+body-parser
+https://www.npmjs.com/package/body-parser
+MIT: http://spdx.org/licenses/MIT
+
+express-flash
+https://www.npmjs.com/package/express-flash
+MIT: https://www.npmjs.com/package/express-flash#license
+
+express-session
+https://www.npmjs.com/package/express-session
+MIT: http://spdx.org/licenses/MIT
+
+connect-ensure-login
+https://www.npmjs.com/package/connect-ensure-login
+MIT: http://spdx.org/licenses/MIT
+
+jade
+https://www.npmjs.com/package/jade
+MIT: http://spdx.org/licenses/MIT
