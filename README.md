@@ -20,7 +20,7 @@ The project contains currently the following functionality:
 I'm writing a series of blog articles about this project:
 
 * [Creating Business Objects and REST APIs with LoopBack](http://heidloff.net/article/creating-rest-apis-loopback)
-* Usage of Cloudant in LoopBack applications
+* [Usage of Cloudant in LoopBack](http://heidloff.net/article/cloudant-loopback-nodejs)
 * Authenticating from LoopBack against Bluemix
 * Tuning the generated REST APIS
 * Authorization
