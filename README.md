@@ -71,7 +71,7 @@ Invoke the API '/api/Persons/login' with the following credentials. You can find
 
 { "username": "Admin", "email": "admin@mydomain.com", "password": "password" }
 
-Copy the token from the id field, paste it in the text field at the top and press 'Set Access Token' [screenshot](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/api-login.png). After this you can invoke all other APIs.
+Copy the token from the id field, paste it in the text field at the top and press 'Set Access Token' ([screenshot](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/api-login.png)). After this you can invoke all other APIs.
 
 
 Setup of the Single Sign On Service
