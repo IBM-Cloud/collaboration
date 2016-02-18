@@ -65,7 +65,7 @@ $ cf push
 
 To run the sample open this URL:
 
-* https://collaboration-farci-custard.mybluemix.net/explorer
+* /explorer, e.g. "https://collaboration-farci-custard.mybluemix.net/explorer"
 
 
 Setup of the Single Sign On Service
@@ -87,7 +87,7 @@ Define the callback in the SSO dashboard, e.g. https://collaboration-farci-custa
 
 To authenticate open this URL:
 
-* https://collaboration-farci-custard.mybluemix.net/explorer
+* /login, e.g. "https://collaboration-farci-custard.mybluemix.net/login"
 
 
 Setup of the Application locally
