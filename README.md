@@ -30,7 +30,7 @@ I'm writing a series of blog articles about this project:
 
 Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for more information.
 
-![alt text](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/tree/master/screenshots/api-overview.png "APIs")
+![alt text](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/api-overview.png "APIs")
 
 Author: Niklas Heidloff [@nheidloff](http://twitter.com/nheidloff)
 
