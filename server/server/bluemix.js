@@ -23,7 +23,7 @@ var models = require('./model-config.json'), dataSources = require('./datasource
 
 module.exports = function() {
   return {
-  	"setUpCloudant" : function(databaseName, callback) {
+    "setUpCloudant" : function(databaseName, callback) {
          
       var cloudantConfig = appEnv.getService(/cloudant.*/);
       if (!cloudantConfig) {
@@ -57,25 +57,27 @@ module.exports = function() {
 
         callback(null);
       });
-  	},
+    },
     "setUpSSOAuthentication" : function(app, loopback, boot, callback) {
 
       var ssoConfig = appEnv.getService(/sso.*/);
       if (!ssoConfig) {
-        callback(null); 
+        callback("No Single Sign On configuration found"); 
       }
       else {
         var loopbackPassport = require('loopback-component-passport');
         var PassportConfigurator = loopbackPassport.PassportConfigurator;
         var passportConfigurator = new PassportConfigurator(app);
         var bodyParser = require('body-parser');
-        var flash      = require('express-flash');
+        var flash = require('express-flash');
 
         var path = require('path');
         app.set('views', path.join(__dirname, 'views'));
         app.set('view engine', 'jade');
 
-        boot(app, __dirname);
+        boot(app, __dirname, function(err) {
+          if (err) throw err;
+        });
 
         app.middleware('parse', bodyParser.json());
         app.middleware('parse', bodyParser.urlencoded({

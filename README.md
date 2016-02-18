@@ -65,7 +65,13 @@ $ cf push
 
 To run the sample open this URL:
 
-* /explorer, e.g. "https://collaboration-farci-custard.mybluemix.net/explorer"
+* /explorer, e.g. https://collaboration-farci-custard.mybluemix.net/explorer
+
+Invoke the API '/api/Persons/login' with the following credentials. You can find the credentials of the other users in [sample-data.js](https://github.com/IBM-Bluemix/collaboration/blob/master/server/server/boot/sample-data.js).
+
+{ "username": "Admin", "email": "admin@mydomain.com", "password": "password" }
+
+Copy the token from the id field, paste it in the text field at the top and press 'Set Access Token' [screenshot](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/api-login.png). After this you can invoke all other APIs.
 
 
 Setup of the Single Sign On Service
@@ -87,7 +93,7 @@ Define the callback in the SSO dashboard, e.g. https://collaboration-farci-custa
 
 To authenticate open this URL:
 
-* /login, e.g. "https://collaboration-farci-custard.mybluemix.net/login"
+* /login, e.g. https://collaboration-farci-custard.mybluemix.net/login
 
 
 Setup of the Application locally
