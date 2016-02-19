@@ -31,9 +31,7 @@ $ cf login -a api.ng.bluemix.net
 $ cf push
 ```
 
-To run the sample open this URL:
-
-* /, e.g. https://collaboration-ng-farci-custard.mybluemix.net/
+To run the sample open the path '/', e.g. https://collaboration-ng-farci-custard.mybluemix.net/.
 
 After you've done the initial 'cf push' you should change manifest.yml and replace ${random-word} with your route. Otherwise new routes will be added the next time you invoke 'cf push'.
 
