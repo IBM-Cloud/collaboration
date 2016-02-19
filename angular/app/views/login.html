@@ -1,0 +1,30 @@
+<h1>Login</h1>
+<hr>
+<form name="loginAdminForm" novalidate ng-submit="loginAsAdmin()">
+  <button class="btn btn-default">Login as Admin</button>
+</form>
+<br>
+<form name="loginManagerForm" novalidate ng-submit="loginAsManager()">
+  <button class="btn btn-default">Login as Manager</button>
+</form>
+<br>
+<form name="loginMikeForm" novalidate ng-submit="loginAsMike()">
+  <button class="btn btn-default">Login as employee Mike</button>
+</form>
+<br>
+<form name="loginJohnForm" novalidate ng-submit="loginAsJohn()">
+  <button class="btn btn-default">Login as employee John</button>
+</form>
+<br>
+<form name="logoutForm" novalidate ng-submit="logout()">
+  <button class="btn btn-default">Logout</button>
+</form>
+
+<hr>
+<h1>Current User</h1>
+<hr>
+<h4>
+Name: {{currentPerson.username}}
+<br><br>
+ID: {{currentUser.getCurrentId()}}
+</h4>

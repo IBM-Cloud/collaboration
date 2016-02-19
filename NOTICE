@@ -3,12 +3,21 @@ https://github.com/ibm-bluemix/collaboration
 © Copyright IBM Corp. 2016
 
 
+The following code is embedded in the 'server' project.
+
 cfenv-wrapper.js
 https://github.com/aerwin/node-cfenv-wrapper
 ALv2: https://github.com/aerwin/node-cfenv-wrapper/blob/master/LICENSE
 
 
-The following Node modules are used but not included in the project:
+The following project has been used to generate the initial version of the 'angular' project.
+
+generator-angular
+https://github.com/yeoman/generator-angular
+BSD: https://github.com/yeoman/generator-angular#license
+
+
+The following Node modules are used in the 'server' project but not included in the project:
 
 compression
 https://www.npmjs.com/package/compression
@@ -93,3 +102,50 @@ MIT: http://spdx.org/licenses/MIT
 jade
 https://www.npmjs.com/package/jade
 MIT: http://spdx.org/licenses/MIT
+
+
+The 'angular' project uses Node modules which but not included in the project but installed via npm.
+All modules are defined in angular/package.json.
+"autoprefixer-core": MIT
+"grunt": MIT
+"grunt-angular-templates": MIT
+"grunt-concurrent": MIT
+"grunt-contrib-clean": MIT
+"grunt-contrib-concat": MIT
+"grunt-contrib-connect": MIT
+"grunt-contrib-copy": MIT
+"grunt-contrib-cssmin": MIT
+"grunt-contrib-htmlmin": MIT
+"grunt-contrib-imagemin": MIT
+"grunt-contrib-jshint": MIT
+"grunt-contrib-uglify": MIT
+"grunt-contrib-watch": MIT
+"grunt-filerev": BSD
+"grunt-google-cdn": BSD
+"grunt-jscs": MIT
+"grunt-karma": MIT
+"grunt-newer": MIT
+"grunt-ng-annotate": MIT
+"grunt-postcss": MIT
+"grunt-svgmin": MIT
+"grunt-usemin": BSD-2-Clause
+"grunt-wiredep": MIT
+"jit-grunt": MIT
+"jshint-stylish": MIT
+"karma-jasmine": MIT
+"karma-phantomjs-launcher": MIT
+"time-grunt": MIT
+"grunt-loopback-sdk-angular": MIT
+"grunt-docular": MIT
+
+The 'angular' project uses JavaScript libraries which but not included in the project but installed via bower.
+All modules are defined in angular/bower.json.
+"angular": MIT
+"bootstrap": MIT
+"angular-animate": MIT
+"angular-cookies": MIT
+"angular-resource": MIT
+"angular-route": MIT
+"angular-sanitize": MIT
+"angular-touch": MIT
+"angular-ui-router": MIT

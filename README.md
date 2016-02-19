@@ -38,6 +38,8 @@ Author: Niklas Heidloff [@nheidloff](http://twitter.com/nheidloff)
 Prerequisites
 ================================================================================
 
+In order to run this sample you need an Bluemix account. [Sign up](https://console.ng.bluemix.net/registration/) if you don't have an account yet.
+
 Make sure the following tools are installed and on your path.
 
 * [node](https://nodejs.org/download/release/v4.2.6/) and npm (it's adviced to use v4.2.6 which is the latest supported version on Bluemix)
@@ -63,6 +65,8 @@ $ npm install
 $ cf push
 ```
 
+After you've done the initial 'cf push' you should change manifest.yml and replace ${random-word} with your route. Otherwise new routes will be added the next time you invoke 'cf push'.
+
 To run the sample open this URL:
 
 * /explorer, e.g. https://collaboration-farci-custard.mybluemix.net/explorer
@@ -84,7 +88,7 @@ $ cf login -a api.ng.bluemix.net
 $ cf create-service SingleSignOn standard collab-sso
 ```
 
-Before you can use the SSO service you need to configure the it via the dashboard UI. Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for details.
+Before you can use the SSO service you need to configure it via the dashboard UI. Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for details.
 
 * Create cloud directory
 * Create users

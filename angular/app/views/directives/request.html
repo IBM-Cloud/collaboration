@@ -1,0 +1,25 @@
+<div ng-controller="RequestController">
+
+	<form name="requestForm" novalidate ng-submit="changeRequest()">
+	  <div class="form-group">
+	  	<div style="line-height: 2.3;">Title:</div>
+	    <input type="text" class="form-control focus" name="title"
+	        placeholder="Title" autocomplete="off" required
+	        ng-model="request.approvalRequest.title"/>
+	    <div style="line-height: 2.3;">Description:</div>
+	    <input type="text" class="form-control focus" name="title"
+	        placeholder="Description" autocomplete="off" required
+	        ng-model="request.approvalRequest.description"/>
+	    <div style="line-height: 2.3;">Requester ID: {{request.requester.username}}</div>
+	    <input type="text" class="form-control focus" name="title"
+	        placeholder="Requester ID" autocomplete="off" required
+	        ng-model="request.approvalRequest.requesterId"/>
+	    <div style="line-height: 2.3;">Approver ID: {{request.approver.username}}</div>
+	    <input type="text" class="form-control focus" name="title"
+	        placeholder="Approver ID" autocomplete="off" required
+	        ng-model="request.approvalRequest.approverId"/>
+	  </div>
+	  <button class="btn btn-default">Change</button> 
+	</form>
+	<h4 style="color: red;">{{requestError}}</h4>
+</div>

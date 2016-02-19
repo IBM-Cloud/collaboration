@@ -24,10 +24,10 @@ server/coverage
 server/npm-debug.log
 npm-debug.log
 server/db.json
+angular/db.json
 angular/node_modules
 angular/dist
 angular/.tmp
 angular/.sass-cache
 angular/bower_components
 angular/docular_generated
-angular

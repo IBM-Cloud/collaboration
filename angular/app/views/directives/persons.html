@@ -1,0 +1,13 @@
+<div ng-controller="PersonController">
+
+	<div class="list-group">
+	  <a href="" class="list-group-item" ng-repeat="person in persons">
+	    <h4 class="list-group-item-heading">{{person.username}}</h4>
+	    <p class="list-group-item-text">EMail: {{person.email}}</p>
+	    <p class="list-group-item-text">ID: {{person.id}}</p>
+	  </a>
+	</div>
+
+	<h4 style="color: red;">{{personsError}}</h4>
+
+</div>

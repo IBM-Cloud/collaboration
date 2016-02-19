@@ -1,0 +1,10 @@
+---
+applications:
+- memory: 256M
+  host: collaboration-ng-haematoid-nut
+  #host: collaboration-ng-${random-word}
+  name: collaboration-ng
+  path: dist/
+  domain: mybluemix.net
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git

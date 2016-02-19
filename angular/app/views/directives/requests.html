@@ -1,0 +1,13 @@
+<div ng-controller="RequestsController">
+	<div class="list-group">
+	  <a href="#/requests?id={{request.id}}" class="list-group-item" ng-repeat="request in requests">
+	    <h4 class="list-group-item-heading">{{request.title}}</h4>
+	    <p class="list-group-item-text">Description: {{request.description}}</p>
+	    <p class="list-group-item-text">Requester ID: {{request.requesterId}}</p>
+	    <p class="list-group-item-text">Approver ID: {{request.approverId}}</p>
+	  </a>
+	</div>
+
+	<h4 style="color: red;">{{requestsError}}</h4>
+
+</div>
