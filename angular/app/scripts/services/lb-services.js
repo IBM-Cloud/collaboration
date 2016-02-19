@@ -1,6 +1,6 @@
 (function(window, angular, undefined) {'use strict';
 
-var urlBase = "http://collaboration-thousandfold-tentacle.mybluemix.net/api";
+var urlBase = "http://collaboration-nheidloff-1534.mybluemix.net/api";
 var authHeader = 'authorization';
 
 function getHost(url) {
