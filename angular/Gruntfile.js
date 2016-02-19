@@ -53,14 +53,14 @@ module.exports = function (grunt) {
       },
       staging: {
           options: {
-            //apiUrl: 'http://localhost:3000/api'
-            apiUrl: 'http://collaboration-thousandfold-tentacle.mybluemix.net/api'
+            apiUrl: 'http://localhost:3000/api'
+            //apiUrl: 'http://collaboration-thousandfold-tentacle.mybluemix.net/api'
           }
       },
       production: {
         options: {
-          //apiUrl: 'http://localhost:3000/api'
-          apiUrl: 'http://collaboration-thousandfold-tentacle.mybluemix.net/api'
+          apiUrl: 'http://localhost:3000/api'
+          //apiUrl: 'http://collaboration-thousandfold-tentacle.mybluemix.net/api'
         }
       }
     },

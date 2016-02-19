@@ -29,7 +29,7 @@ stages:
       cd server
 
       #!/bin/bash
-      cf push "${CF_APP}"
+      cf push "${CF_APP}" -n "${CF_APP}"
 
       # View logs
       #cf logs "${CF_APP}" --recent

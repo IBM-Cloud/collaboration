@@ -5,7 +5,7 @@ With the AngularJS client you can log in as one of the test users, read all user
 
 Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for details.
 
-To run the client start your server first. Then point to the API of your server in the Gruntfile.js. Search for 'apiUrl' and define your URL.
+To run the client start your server first. Then point to the API of your server in [Gruntfile.js](https://github.com/IBM-Bluemix/collaboration/blob/master/angular/Gruntfile.js#L57). Search for 'apiUrl' and define your URL.
 
 Before you can launch the client you need to build it.
 
