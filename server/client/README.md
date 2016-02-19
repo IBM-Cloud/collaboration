@@ -1,3 +1,1 @@
-## Client
-
-This is the place for your application front-end files.
+The client is in the angular directory.
