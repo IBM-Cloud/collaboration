@@ -110,3 +110,11 @@ Copy all credentials of your Bluemix service(s) into a new file 'env.json'. Ther
 The SSO service only allows to define one callback per Bluemix application. However to run the application locally the callback needs to point to a local URL like 'http://localhost:3000/auth/ibm/callback'. To work around this you can create a second Node.js application, bind the same SSO service to it and define a second callback. Make sure you copy the credentials of this second instance into env.json.
 
 To run the application locally invoke 'node .'.
+
+
+AngularJS Client
+================================================================================
+
+With the AngularJS client you can log in as one of the test users, read all user information, read approval requests, read details about specific approval requests and change specific requests.
+
+Check out the [angular](https://github.com/IBM-Bluemix/collaboration/tree/master/angular) directory for details.
