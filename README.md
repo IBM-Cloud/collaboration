@@ -16,6 +16,7 @@ The project contains currently the following functionality:
 * Authentication from Node.js against the Single Sign On service or test users in Cloudant
 * Authorization in Node.js applications on application level and on document level via roles
 * REST APIs to access sample business objects 'persons' and 'approvalRequests'
+* AngularJS client
 
 I'm writing a series of blog articles about this project:
 
@@ -40,7 +41,7 @@ Prerequisites
 
 In order to run this sample you need an Bluemix account. [Sign up](https://console.ng.bluemix.net/registration/) if you don't have an account yet.
 
-Make sure the following tools are installed and on your path.
+If you want to modify the sample locally, make sure the following tools are installed and on your path.
 
 * [node](https://nodejs.org/download/release/v4.2.6/) and npm (it's adviced to use v4.2.6 which is the latest supported version on Bluemix)
 * [git](https://git-scm.com/downloads)
@@ -51,9 +52,13 @@ Make sure the following tools are installed and on your path.
 Setup of the Application on Bluemix
 ================================================================================
 
+In order to run the APIs on Bluemix you can deploy the (server) application via one click.
+
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Bluemix/collaboration)
+
 When running the application for the first, time test data and test users are created in the Cloudant database. By default authentication is done with these test users. Alternatively you can use the Bluemix Single Sign On service for authentication. 
 
-Invoke the following commands to create the Cloudant service and deploy the application to Bluemix.
+As alternative to the Deploy Button you can also invoke the following commands to create the Cloudant service and deploy the application to Bluemix. This will allow you to do local changes and then push updates.
 
 ```sh
 $ cf login -a api.ng.bluemix.net

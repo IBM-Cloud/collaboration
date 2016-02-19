@@ -35,6 +35,8 @@ To run the sample open the path '/', e.g. https://collaboration-ng-farci-custard
 
 After you've done the initial 'cf push' you should change manifest.yml and replace ${random-word} with your route. Otherwise new routes will be added the next time you invoke 'cf push'.
 
+Here is a screenshot:
+
 ![alt text](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/angular-5.png "Screenshot")
 
 The initial version of this project has been generated with [yo angular generator](https://github.com/yeoman/generator-angular) version 0.15.1.
