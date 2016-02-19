@@ -47,6 +47,7 @@ bluemix.setUpCloudant('cloudant', function(err) {
           if (err) throw err;
         });
       }
+
       // start the server if `$ node server.js`
       if (require.main === module)
         app.start();

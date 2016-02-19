@@ -7,8 +7,6 @@ applications:
 - buildpack: sdk-for-nodejs
   path: ./server
   disk_quota: 256M
-  #host: collaboration-farci-custard
-  host: collaboration-${random-word}
   name: collaboration
   path: .
   domain: mybluemix.net
