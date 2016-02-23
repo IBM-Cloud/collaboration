@@ -97,12 +97,12 @@ module.exports = function(ApprovalRequest) {
   }
 
   var ds = loopback.createDataSource('memory');
-  var Per = ds.define('Per', app.models.Person);
+  var Person = ds.define('Person', app.models.Person);
   var ApprovalRequestExpandedModel = {
   	id: String,
 	approvalRequest: ApprovalRequest,
-	requester: Per,
-	approver: Per
+	requester: Person,
+	approver: Person
   };
   var ApprovalRequestExpanded = ds.define('ApprovalRequestExpanded', ApprovalRequestExpandedModel);
      
