@@ -1,0 +1,17 @@
+<ion-view view-title="Requests">
+  <ion-content >
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="request in requests" type="item-text-wrap" href="#/tab/requests/{{request.id}}">
+        
+        <h2>{{request.title}}</h2>
+        <p>{{request.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+      </ion-item>
+      <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap" ng-show="requestsError" class="ng-show">
+        <h3 style="color: red;">{{requestsError}}</h3>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="Persons">
+  <ion-content>
+   
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="person in persons" type="item-text-wrap">
+        
+        <h2>{{person.username}}</h2>
+        <p>{{person.email}}</p>
+        
+      </ion-item>
+      <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap" ng-show="personsError" class="ng-show">
+      	<h3 style="color: red;">{{personsError}}</h3>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

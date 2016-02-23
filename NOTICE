@@ -106,6 +106,7 @@ MIT: http://spdx.org/licenses/MIT
 
 The 'angular' project uses Node modules which but not included in the project but installed via npm.
 All modules are defined in angular/package.json.
+
 "autoprefixer-core": MIT
 "grunt": MIT
 "grunt-angular-templates": MIT
@@ -138,8 +139,10 @@ All modules are defined in angular/package.json.
 "grunt-loopback-sdk-angular": MIT
 "grunt-docular": MIT
 
+
 The 'angular' project uses JavaScript libraries which but not included in the project but installed via bower.
 All modules are defined in angular/bower.json.
+
 "angular": MIT
 "bootstrap": MIT
 "angular-animate": MIT
@@ -149,3 +152,27 @@ All modules are defined in angular/bower.json.
 "angular-sanitize": MIT
 "angular-touch": MIT
 "angular-ui-router": MIT
+
+
+The following project has been used to generate the initial version of the 'ionic' project.
+
+ionic
+https://github.com/driftyco/ionic-cli
+MIT: http://spdx.org/licenses/MIT
+
+
+The 'ionic' project uses JavaScript libraries which but not included in the project but installed via bower.
+All modules are defined in ionic/bower.json.
+
+"ionic": "driftyco/ionic-bower": MIT
+"angular-resource": MIT
+
+
+The 'ionic' project uses Node modules which but not included in the project but installed via npm.
+All modules are defined in ionic/package.json.
+
+"gulp": MIT
+"gulp-sass": MIT
+"gulp-concat": MIT
+"gulp-minify-css": MIT
+"gulp-rename": MIT

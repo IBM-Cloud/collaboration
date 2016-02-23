@@ -1,0 +1,38 @@
+<ion-view view-title="Request">
+  <ion-content>
+
+	<form name="requestForm" novalidate ng-submit="changeRequest()">
+		<div class="list">
+		  <label class="item item-input">
+		    <span class="input-label">Title</span>
+		    <input type="text" ng-model="request.approvalRequest.title">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Description</span>
+		    <input type="text" ng-model="request.approvalRequest.description">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Requester Name</span>
+		    <input type="text" ng-model="request.requester.username" ng-disabled=true>
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Requester ID</span>
+		    <input type="text" ng-model="request.approvalRequest.requesterId">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Approver Name</span>
+		    <input type="text" ng-model="request.approver.username" ng-disabled=true>
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Approver ID</span>
+		    <input type="text" ng-model="request.approvalRequest.approverId">
+		  </label>
+		  <br>
+		  <button class="button button-positive" style="margin-left: 15px;">Change</button> 
+		</div>
+	</form>
+
+	<h4 style="color: red;margin-left: 15px;">{{requestMessage}}</h4>
+
+  </ion-content>
+</ion-view>

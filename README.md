@@ -16,7 +16,8 @@ The project contains currently the following functionality:
 * Authentication from Node.js against the Single Sign On service or test users in Cloudant
 * Authorization in Node.js applications on application level and on document level via roles
 * REST APIs to access sample business objects 'persons' and 'approvalRequests'
-* AngularJS client
+* Web client via AngularJS
+* Mobile hybrid client via Ionic, Cordova and AngularJS
 
 I'm writing a series of blog articles about this project:
 
@@ -26,8 +27,8 @@ I'm writing a series of blog articles about this project:
 * [Customization of Authentication Pages in Bluemix](http://heidloff.net/article/customization-authentication-bluemix)
 * [Customization of REST APIs in LoopBack Applications](http://heidloff.net/article/customization-rest-apis-loopback-bluemix)
 * Authorization
-* Consuming Watson services
-* AngularJS client
+* Consuming Bluemix services
+* Web client
 * Mobile client
 
 Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for more information.
@@ -118,9 +119,19 @@ The SSO service only allows to define one callback per Bluemix application. Howe
 To run the application locally invoke 'node .'.
 
 
-AngularJS Client
+Web client via AngularJS
 ================================================================================
 
 With the AngularJS client you can log in as one of the test users, read all user information, read approval requests, read details about specific approval requests and change specific requests.
 
 Check out the [angular](https://github.com/IBM-Bluemix/collaboration/tree/master/angular) directory for details.
+
+
+Mobile hybrid client via Ionic, Cordova and AngularJS
+================================================================================
+
+With the Ionic client you can log in as one of the test users, read all user information, read approval requests, read details about specific approval requests and change specific requests.
+
+You can run the client in a browser for testing purposes and you can create platforms for iOS and Android.
+
+Check out the [ionic](https://github.com/IBM-Bluemix/collaboration/tree/master/ionic) directory for details.

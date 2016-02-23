@@ -31,3 +31,8 @@ angular/.tmp
 angular/.sass-cache
 angular/bower_components
 angular/docular_generated
+ionic/node_modules/
+ionic/platforms/
+ionic/plugins/
+ionic/resources
+ionic/www/lib/

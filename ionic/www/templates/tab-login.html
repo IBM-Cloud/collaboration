@@ -1,0 +1,34 @@
+<ion-view view-title="Login">
+  <ion-content class="padding">
+   
+    <form name="loginAdminForm" novalidate ng-submit="loginAsAdmin()">
+  		<button class="button button-positive">Login as Admin</button>
+	</form>
+	<br>
+	<form name="loginManagerForm" novalidate ng-submit="loginAsManager()">
+	  <button class="button button-positive">Login as Manager</button>
+	</form>
+	<br>
+	<form name="loginMikeForm" novalidate ng-submit="loginAsMike()">
+	  <button class="button button-positive">Login as employee Mike</button>
+	</form>
+	<br>
+	<form name="loginJohnForm" novalidate ng-submit="loginAsJohn()">
+	  <button class="button button-positive">Login as employee John</button>
+	</form>
+	<br>
+	<form name="logoutForm" novalidate ng-submit="logout()">
+	  <button class="button button-positive">Logout</button>
+	</form>
+
+	<br>
+	<hr>
+	<br>
+	<h4>Current User</h4>
+	<h5>
+	Name: {{currentPerson.username}}
+	<br><br>
+	ID: {{currentUser.getCurrentId()}}
+	</h5>
+  </ion-content>
+</ion-view>
