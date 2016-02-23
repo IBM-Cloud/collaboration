@@ -51,6 +51,6 @@ After you've done the initial 'cf push' you should change manifest.yml and repla
 
 Here is a screenshot:
 
-![alt text](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/angular-5.png "Screenshot")
+![alt text](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/angular-5s.png "Screenshot")
 
 The initial version of this project has been generated with [yo angular generator](https://github.com/yeoman/generator-angular) version 0.15.1.
