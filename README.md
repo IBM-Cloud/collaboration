@@ -24,7 +24,7 @@ I'm writing a series of blog articles about this project:
 * [Usage of Cloudant in LoopBack Applications](http://heidloff.net/article/cloudant-loopback-nodejs)
 * [Authentication in LoopBack Applications against Bluemix](http://heidloff.net/article/authentication-loopback-bluemix)
 * [Customization of Authentication Pages in Bluemix](http://heidloff.net/article/customization-authentication-bluemix)
-* [Customization of REST APIs in LoopBack Applications](http://heidloff.net/article/customization-authentication-pages-bluemix)
+* [Customization of REST APIs in LoopBack Applications](http://heidloff.net/article/customization-rest-apis-loopback-bluemix)
 * Authorization
 * Consuming Watson services
 * AngularJS client
