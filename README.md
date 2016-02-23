@@ -143,3 +143,11 @@ Consuming Bluemix Services
 When Bluemix services are created and bound to Bluemix applications credentials are created for developers to access the services via REST APIs. When running this application on Bluemix the credentials are automatically read from the Bluemix context (VCAP_SERVICES). When running locally the credentials are read from the file 'env.json' which you need to create as described above.
 
 The code in [approval-request.js](https://github.com/IBM-Bluemix/collaboration/blob/master/server/common/models/approval-request.js) shows how to invoke the Watson Language Translation service via the [Watson Developer Cloud Node.js SDK](https://github.com/watson-developer-cloud/node-sdk).
+
+To add the Watson service to the app invoke these commands (change the app name):
+
+```sh
+cf create-service language_translation standard collab-translation
+cf bind-service collaboration-nheidloff-1534 collab-translation
+cf restart collaboration-nheidloff-1534
+```
