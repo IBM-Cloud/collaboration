@@ -14,6 +14,10 @@
 // limitations under the License.
 //------------------------------------------------------------------------------
 
+var models = require('../../server/model-config.json');
+var loopback = require('loopback');
+var app = loopback();
+
 module.exports = function(ApprovalRequest) {
 
   ApprovalRequest.disableRemoteMethod("findOne", true);
@@ -50,6 +54,7 @@ module.exports = function(ApprovalRequest) {
     	  }
     	  else {
     	    output.approvalRequest = approvalrequests[0];
+    	    output.id = approvalrequests[0].id;
 					
 			Person.find ({where: {or: [{"id": approvalrequests[0].approverId}, {"id": approvalrequests[0].requesterId}]}}, function (err, persons) {
 			  if (err) {	  				
@@ -90,10 +95,20 @@ module.exports = function(ApprovalRequest) {
       }
     });
   }
+
+  var ds = loopback.createDataSource('memory');
+  var Per = ds.define('Per', app.models.Person);
+  var ApprovalRequestExpandedModel = {
+  	id: String,
+	approvalRequest: ApprovalRequest,
+	requester: Per,
+	approver: Per
+  };
+  var ApprovalRequestExpanded = ds.define('ApprovalRequestExpanded', ApprovalRequestExpandedModel);
      
   ApprovalRequest.remoteMethod('expanded', {
       accepts: {arg: 'id', type: 'string'},
-      returns: { type: 'Object', root: true },      
+      returns: { type: 'ApprovalRequestExpanded', root: true },      
       http: {path: '/expanded', verb: 'get'},
       description: "Find a model instance by id from the data source and additionally return children."
     }
