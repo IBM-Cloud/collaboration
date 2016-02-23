@@ -1,4 +1,4 @@
-Angular Client
+Web client via AngularJS
 ================================================================================
 
 With the AngularJS client you can log in as one of the test users, read all user information, read approval requests, read details about specific approval requests and change specific requests.
@@ -7,7 +7,7 @@ Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/ma
 
 Make sure the following tools are installed and on your path.
 
-* [node](https://nodejs.org/download/release/v4.2.6/) and npm (it's adviced to use v4.2.6 which is the latest supported version on Bluemix)
+* [node](https://nodejs.org/download/release/v4.2.6/) and npm
 * [git](https://git-scm.com/downloads)
 * [cf](https://github.com/cloudfoundry/cli#downloads)
 * [grunt](http://gruntjs.com/installing-grunt)

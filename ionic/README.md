@@ -1,4 +1,4 @@
-Ionic Client
+Mobile hybrid client via Ionic, Cordova and AngularJS
 ================================================================================
 
 With the Ionic client you can log in as one of the test users, read all user information, read approval requests, read details about specific approval requests and change specific requests.
@@ -7,7 +7,7 @@ You can run the client in a browser for testing purposes and you can create plat
 
 Make sure the following tools are installed and on your path.
 
-* [node](https://nodejs.org/download/release/v4.2.6/) and npm (it's adviced to use v4.2.6 which is the latest supported version on Bluemix)
+* [node](https://nodejs.org/download/release/v4.2.6/) and npm 
 * [git](https://git-scm.com/downloads)
 * [ionic](http://ionicframework.com/getting-started/)
 * [cordova](https://cordova.apache.org/#getstarted)
@@ -24,7 +24,7 @@ $ npm install
 $ bower install
 ```
 
-To run the client start your server first. Then point to the API of your server in the file 'www/js/lb-services.js' at the top (variable 'urlBase'). In contrast to the [Angular client](https://github.com/IBM-Bluemix/collaboration/tree/master/angular) lb-services.js is not generated automatically in a build script. Instead you need to run the Angular client build and copy the file if you make changes to the server APIs.
+To run the client start your server first. Then point to the API of your server in the file [lb-services.js](https://github.com/IBM-Bluemix/collaboration/blob/master/ionic/www/js/lb-services.js) at the top (variable 'urlBase'). In contrast to the [Angular client](https://github.com/IBM-Bluemix/collaboration/tree/master/angular) lb-services.js is not generated automatically in a build script. Instead you need to run the Angular client build and copy the file if you make changes to the server APIs.
 
 To launch the client in a browser you need to invoke one of the following commands:
 

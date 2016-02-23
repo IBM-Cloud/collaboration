@@ -85,7 +85,31 @@ module.exports = function(ApprovalRequest) {
 						  output.approver = persons[1];
 						}
 					  }
-					  cb(null, output);
+				  		
+				  	  // sample Watson service invocation
+				  	  var watson = require('watson-developer-cloud');
+				  	  var cfenv = require('../../server/cfenv-wrapper');
+				  	  var appEnv = cfenv.getAppEnv();			  
+					  var translationConfig = appEnv.getService(/translation.*/);
+				      if (translationConfig) {						   
+						var language_translation = watson.language_translation({
+						  username: translationConfig.credentials.username,
+						  password: translationConfig.credentials.password,
+						  version: 'v2'
+						});
+
+						language_translation.translate({
+						  text: output.approvalRequest.title, source : 'en', target: 'es' },
+						  function (err, translation) {
+						    if (!err) {
+						    	output.translatedTitle = translation;
+						    }
+						    cb(null, output);
+						});
+				  	  }
+				  	  else {
+					  	cb(null, output);
+					  }
 					}
 				  }
 				}
@@ -102,7 +126,8 @@ module.exports = function(ApprovalRequest) {
   	id: String,
 	approvalRequest: ApprovalRequest,
 	requester: Person,
-	approver: Person
+	approver: Person,
+	translatedTitle: String
   };
   var ApprovalRequestExpanded = ds.define('ApprovalRequestExpanded', ApprovalRequestExpandedModel);
      

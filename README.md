@@ -112,7 +112,7 @@ Setup of the Application locally
 
 In order to run the application locally you need to do some additional configuration.
 
-Copy all credentials of your Bluemix service(s) into a new file 'env.json'. There is a sample file '[env_sample.json](https://github.com/IBM-Bluemix/collaboration/blob/master/server/env_sample.json)' that shows the structure. You can get the credentials by invoking the command 'cf env collaboration'.
+Copy all credentials of your Bluemix service(s) into a new file 'env.json'. There is a sample file '[env_sample.json](https://github.com/IBM-Bluemix/collaboration/blob/master/server/env_sample.json)' that shows the base structure with the Cloudant service. The file '[env_sample_services.json](https://github.com/IBM-Bluemix/collaboration/blob/master/server/env_sample_services.json)' contains additional Bluemix services. You can get the credentials by invoking the command 'cf env collaboration'. 
 
 The SSO service only allows to define one callback per Bluemix application. However to run the application locally the callback needs to point to a local URL like 'http://localhost:3000/auth/ibm/callback'. To work around this you can create a second Node.js application, bind the same SSO service to it and define a second callback. Make sure you copy the credentials of this second instance into env.json.
 
@@ -135,3 +135,11 @@ With the Ionic client you can log in as one of the test users, read all user inf
 You can run the client in a browser for testing purposes and you can create platforms for iOS and Android.
 
 Check out the [ionic](https://github.com/IBM-Bluemix/collaboration/tree/master/ionic) directory for details.
+
+
+Consuming Bluemix Services
+================================================================================
+
+When Bluemix services are created and bound to Bluemix applications credentials are created for developers to access the services via REST APIs. When running this application on Bluemix the credentials are automatically read from the Bluemix context (VCAP_SERVICES). When running locally the credentials are read from the file 'env.json' which you need to create as described above.
+
+The code in [approval-request.js](https://github.com/IBM-Bluemix/collaboration/blob/master/server/common/models/approval-request.js) shows how to invoke the Watson Language Translation service via the [Watson Developer Cloud Node.js SDK](https://github.com/watson-developer-cloud/node-sdk).

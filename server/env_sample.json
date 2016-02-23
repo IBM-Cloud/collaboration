@@ -1,27 +1,5 @@
 {
  "VCAP_SERVICES": {
-  "SingleSignOn": [
-   {
-    "credentials": {
-     "authorizationEndpointUrl": "https://collaboration-xxx.iam.ibmcloud.com/idaas/oidc/endpoint/default/authorize",
-     "clientId": "xxx",
-     "issuerIdentifier": "collaboration-xxx.iam.ibmcloud.com",
-     "secret": "xxx",
-     "serverSupportedScope": [
-      "openid"
-     ],
-     "tokenEndpointUrl": "https://collaboration-xxx.iam.ibmcloud.com/idaas/oidc/endpoint/default/token"
-    },
-    "label": "SingleSignOn",
-    "name": "collab-sso",
-    "plan": "standard",
-    "tags": [
-     "security",
-     "ibm_created",
-     "ibm_dedicated_public"
-    ]
-   }
-  ],
   "cloudantNoSQLDB": [
    {
     "credentials": {

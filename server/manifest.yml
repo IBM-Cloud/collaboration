@@ -5,7 +5,7 @@ declared-services:
     plan: Shared
 applications:
 - disk_quota: 256M
-  #host: collaboration-farci-custard
+  #host: collaboration-nheidloff-1534
   host: collaboration-${random-word}
   name: collaboration
   path: .

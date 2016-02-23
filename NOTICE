@@ -103,6 +103,9 @@ jade
 https://www.npmjs.com/package/jade
 MIT: http://spdx.org/licenses/MIT
 
+watson-developer-cloud
+https://www.npmjs.com/package/watson-developer-cloud
+ALv2: http://spdx.org/licenses/Apache-2.0
 
 The 'angular' project uses Node modules which but not included in the project but installed via npm.
 All modules are defined in angular/package.json.
