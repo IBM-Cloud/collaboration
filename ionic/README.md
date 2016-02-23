@@ -51,6 +51,6 @@ $ ionic emulate android
 
 Here is a screenshot:
 
-![alt text](https://github.com/IBM-Bluemix/collaboration/blob/master/screenshots/ionic-ios-6.png "Screenshot")
+![alt text](https://github.com/IBM-Bluemix/collaboration/blob/master/screenshots/ionic-android-1.png "Screenshot")
 
 The initial version of this project has been generated with [ionic start loopback tabs](http://ionicframework.com/getting-started/).
