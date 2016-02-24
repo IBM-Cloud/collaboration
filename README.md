@@ -1,7 +1,7 @@
-Patterns for collaborative Applications on Bluemix
+Collaborative Line of Business Applications on Bluemix
 ================================================================================
 
-The [collaboration](https://github.com/ibm-bluemix/collaboration) project contains sample code that shows how to build collaborative business applications on [IBM Bluemix](https://bluemix.net), for example document based applications like discussions or approval workflows. 
+The [collaboration](https://github.com/ibm-bluemix/collaboration) project contains sample code that shows how to build collaborative line of business applications on [IBM Bluemix](https://bluemix.net), for example document based applications like discussions or approval workflows. 
 
 Technically the project is similar to the popular MEAN stack with some additional functionality. It's basically a CLEAN stack with Cloudant, LoopBack, Express, Angular and Node.
 
