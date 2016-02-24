@@ -1,0 +1,13 @@
+{
+  "discover": true,
+  "type": "reference_architecture",
+  "compute": [
+    "cloud_foundry"
+  ],
+  "runtimes": [
+    "node"
+  ],
+  "services": [
+    "Cloudant", "SSO", "WatsonMachineTranslation"
+  ]
+}
