@@ -26,10 +26,10 @@ I'm writing a series of blog articles about this project:
 * [Authentication in LoopBack Applications against Bluemix](http://heidloff.net/article/authentication-loopback-bluemix)
 * [Customization of Authentication Pages in Bluemix](http://heidloff.net/article/customization-authentication-bluemix)
 * [Customization of REST APIs in LoopBack Applications](http://heidloff.net/article/customization-rest-apis-loopback-bluemix)
-* Authorization
-* Consuming Bluemix services
+* [Authorization in LoopBack Applications on Bluemix](http://heidloff.net/article/authorization-loopback-bluemix)
 * Web client
 * Mobile client
+* Consuming Bluemix services
 
 Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for more information.
 
@@ -58,7 +58,7 @@ In order to run the APIs on Bluemix you can deploy the (server) application via 
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Bluemix/collaboration)
 
-When running the application for the first, time test data and test users are created in the Cloudant database. By default authentication is done with these test users. Alternatively you can use the Bluemix Single Sign On service for authentication. 
+When running the application for the first time, test data and test users are created in the Cloudant database. By default authentication is done with these test users. Alternatively you can use the Bluemix Single Sign On service for authentication. 
 
 As alternative to the Deploy Button you can also invoke the following commands to create the Cloudant service and deploy the application to Bluemix. This will allow you to do local changes and then push updates.
 
@@ -74,8 +74,9 @@ $ cf push
 
 After you've done the initial 'cf push' you should change manifest.yml and replace ${random-word} with your route. Otherwise new routes will be added the next time you invoke 'cf push'.
 
-To run the sample open this URL:
+To run the sample open one of these URLs:
 
+* /, e.g. https://collaboration-farci-custard.mybluemix.net/
 * /explorer, e.g. https://collaboration-farci-custard.mybluemix.net/explorer
 
 Invoke the API '/api/Persons/login' with the following credentials. You can find the credentials of the other users in [sample-data.js](https://github.com/IBM-Bluemix/collaboration/blob/master/server/server/boot/sample-data.js).
