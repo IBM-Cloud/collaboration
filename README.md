@@ -1,7 +1,7 @@
-Collaborative Line of Business Applications on Bluemix
+Collaborative LoB Applications on Bluemix
 ================================================================================
 
-The [collaboration](https://github.com/ibm-bluemix/collaboration) project contains sample code that shows how to build collaborative line of business applications on [IBM Bluemix](https://bluemix.net), for example document based applications like discussions or approval workflows. 
+The [collaboration](https://github.com/ibm-bluemix/collaboration) project contains sample code that shows how to build collaborative Line of Business applications on [IBM Bluemix](https://bluemix.net), for example document based applications like discussions or approval workflows. 
 
 Technically the project is similar to the popular MEAN stack with some additional functionality. It's basically a CLEAN stack with Cloudant, LoopBack, Express, Angular and Node.
 
@@ -33,7 +33,7 @@ I'm writing a series of blog articles about this project:
 
 Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for more information.
 
-![alt text](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/api-overview.png "APIs")
+[![CLEAN Presentation](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/presentation.png)](http://www.slideshare.net/niklasheidloff/collaborative-line-of-business-applications-on-ibm-bluemix)
 
 Author: Niklas Heidloff [@nheidloff](http://twitter.com/nheidloff)
 
