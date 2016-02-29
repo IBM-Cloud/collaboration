@@ -27,11 +27,11 @@ I'm writing a series of blog articles about this project:
 * [Customization of Authentication Pages in Bluemix](http://heidloff.net/article/customization-authentication-bluemix)
 * [Customization of REST APIs in LoopBack Applications](http://heidloff.net/article/customization-rest-apis-loopback-bluemix)
 * [Authorization in LoopBack Applications on Bluemix](http://heidloff.net/article/authorization-loopback-bluemix)
-* Web client
+* [How to write AngularJS Frontends for LoopBack Applications](http://heidloff.net/article/how-to-write-angularjs-loopback-applications)
 * Mobile client
 * Consuming Bluemix services
 
-Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder for more information.
+Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder and the [presentation](http://www.slideshare.net/niklasheidloff/collaborative-line-of-business-applications-on-ibm-bluemix) for more information.
 
 [![CLEAN Presentation](https://raw.githubusercontent.com/IBM-Bluemix/collaboration/master/screenshots/presentation.png)](http://www.slideshare.net/niklasheidloff/collaborative-line-of-business-applications-on-ibm-bluemix)
 
@@ -41,7 +41,7 @@ Author: Niklas Heidloff [@nheidloff](http://twitter.com/nheidloff)
 Prerequisites
 ================================================================================
 
-In order to run this sample you need an Bluemix account. [Sign up](https://console.ng.bluemix.net/registration/) if you don't have an account yet.
+In order to run this sample you need a Bluemix account. [Sign up](https://console.ng.bluemix.net/registration/) if you don't have an account yet.
 
 If you want to modify the sample locally, make sure the following tools are installed and on your path.
 
