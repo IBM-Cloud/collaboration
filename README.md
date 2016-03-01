@@ -28,7 +28,7 @@ I'm writing a series of blog articles about this project:
 * [Customization of REST APIs in LoopBack Applications](http://heidloff.net/article/customization-rest-apis-loopback-bluemix)
 * [Authorization in LoopBack Applications on Bluemix](http://heidloff.net/article/authorization-loopback-bluemix)
 * [How to write AngularJS Frontends for LoopBack Applications](http://heidloff.net/article/how-to-write-angularjs-loopback-applications)
-* Mobile client
+* [How to write Mobile Apps for LoopBack Applications](http://heidloff.net/article/how-to-write-mobile-apps-loopback)
 * Consuming Bluemix services
 
 Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder and the [presentation](http://www.slideshare.net/niklasheidloff/collaborative-line-of-business-applications-on-ibm-bluemix) for more information.
