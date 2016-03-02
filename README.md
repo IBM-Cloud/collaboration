@@ -19,7 +19,9 @@ The project contains currently the following functionality:
 * Web client via AngularJS
 * Mobile hybrid client via Ionic, Cordova and AngularJS
 
-I'm writing a series of blog articles about this project:
+
+Documentation
+================================================================================
 
 * [Creating Business Objects and REST APIs with LoopBack](http://heidloff.net/article/creating-rest-apis-loopback)
 * [Usage of Cloudant in LoopBack Applications](http://heidloff.net/article/cloudant-loopback-nodejs)
@@ -29,7 +31,7 @@ I'm writing a series of blog articles about this project:
 * [Authorization in LoopBack Applications on Bluemix](http://heidloff.net/article/authorization-loopback-bluemix)
 * [How to write AngularJS Frontends for LoopBack Applications](http://heidloff.net/article/how-to-write-angularjs-loopback-applications)
 * [How to write Mobile Apps for LoopBack Applications](http://heidloff.net/article/how-to-write-mobile-apps-loopback)
-* Consuming Bluemix services
+* [How to consume Bluemix Services in LoopBack Applications](http://heidloff.net/article/how-to-consume-bluemix-services-loopback)
 
 Check out the [screenshots](https://github.com/ibm-bluemix/collaboration/tree/master/screenshots) folder and the [presentation](http://www.slideshare.net/niklasheidloff/collaborative-line-of-business-applications-on-ibm-bluemix) for more information.
 
