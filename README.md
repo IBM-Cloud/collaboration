@@ -23,6 +23,7 @@ The project contains currently the following functionality:
 Documentation
 ================================================================================
 
+* [Introducing the CLEAN Stack – JavaScript everywhere](http://heidloff.net/article/introducing-clean-stack-javascript-everywhere)
 * [Creating Business Objects and REST APIs with LoopBack](http://heidloff.net/article/creating-rest-apis-loopback)
 * [Usage of Cloudant in LoopBack Applications](http://heidloff.net/article/cloudant-loopback-nodejs)
 * [Authentication in LoopBack Applications against Bluemix](http://heidloff.net/article/authentication-loopback-bluemix)
